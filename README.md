@@ -260,35 +260,39 @@ _5.L2 cache miss rate_
 **1.Χρόνος εκτέλεσης(sim_seconds)**
  
 
-![](https://user-images.githubusercontent.com/57605047/70481082-2c87fb00-1aea-11ea-9156-fa3a53efcb2b.png) 
+![sim](https://user-images.githubusercontent.com/57605047/70481082-2c87fb00-1aea-11ea-9156-fa3a53efcb2b.png) 
 
 
 Παρατηρώντας τις καταγραφές μας αλλά και το σχετικό γράφημα βλέπουμε ότι για τα bencmarks 401.bzip2,429.mcf,456.hmmer έχουν κοντινό χρόνο εκτέλεσης και κάτω από 0,2 seconds,το benchmark 470.lbm έχει χρόνο εκτέλεσης πάνω από 0,2 seconds ενώ το 458.sjeng benchmark έχει πολύ μεγαλύτερο χρόνο εκτέλεσης από τα υπόλοιπα,λίγο παραπάνω από 0,7 seconds.
 
 **2.Cycles per instruction**
 
-![](/home/uglynick/Downloads/CPI.png) 
+![CPI](https://user-images.githubusercontent.com/57605047/70481260-b932b900-1aea-11ea-9d80-758fff44d66d.png)
+
 
 
 Στο κομμάτι που αφορά βλέπουμε ότι είναι ανάλογο του χρόνου εκτέλεσης(sim_seconds*10).Τα benchmarks 429.mcf και 456.hmmer έχουν αρκετά καλό CPI,κοντά στο 1.Το 401.bzip2 έχει 1,6 και το 470.lbm έχει 2,6 κάτι που δεν έιναι καθόλου καλό.Όσο για το 458.sjeng το CPI είναι στα 7 κάτι που είναι πάρα πολύ υψηλό.
 
 **3.L1 instruction cache miss rate**
 
-![](/home/uglynick/Downloads/L1i.png) 
+![L1i](https://user-images.githubusercontent.com/57605047/70481343-f26b2900-1aea-11ea-9c1e-606f8a881da4.png)
+
 
 
 Εδώ τα πιο χαμηλά miss rates τα έχουν τα 429.mcf και 458.sjeng.Τα benchmarks 401.bzip2 και 470.lbm έχουν miss rates τα επιδέχονται βελτίωσης και πολύ υψηλό έχει 456.hmmer.
 
 **4.L1 data cache miss rate**
 
-![](/home/uglynick/Downloads/L1d.png) 
+![L1d](https://user-images.githubusercontent.com/57605047/70481359-ff881800-1aea-11ea-8ba1-ec08ad4eaa4a.png)
+
 
 
 Πολύ χαμήλο miss rate έχουν τα 429.mcf,456.hmmer και επίσης χαμηλό έχει το 401.bzip2.Υψηλό έχει το 470.lbm ένω διπλάσιο από αυτό έχει 458.sjeng.
 
 **5.L2 cache miss rate**
 
-![](/home/uglynick/Downloads/L2.png) 
+![L2](https://user-images.githubusercontent.com/57605047/70481369-0ca50700-1aeb-11ea-937d-3560f570771e.png)
+
 
 
 Για το L2 cache miss rate χαμηλό έχει το 456.hmmer.Το 401.bzip2 έχει λίγο πιο μεγάλο από 0,2,το 429.mcf έχει σχεδόν 0,7.Τα benchmarks 458.sjeng και 470.lbm έχουν πολύ υψηλό,σχεδόν 1.
@@ -392,7 +396,7 @@ To CPI(cycles per instruction) του benchmark ήταν 1.613367
 
 **1.L1 data cache size**
 
-![](/home/uglynick/Downloads/L1dcs.png) 
+![L1dcs](https://user-images.githubusercontent.com/57605047/70481403-26464e80-1aeb-11ea-9cf1-1bd97f6576c7.png) 
 
 
 Αυτό που βλέπουμε σε αυτό το γράφημα είναι ότι η αλλαγή του μεγεθούς της L1 data cache επηρεάζει θετικά την απόδοση του 401.bzip2 benchmark ενώ σε όλα τα άλλα έχει αμελητέα επίδραση.Πιστεύουμε ότι αυτό είναι λογικό λόγω της λειτουργίας του συγκεκριμένου benchmark που περιγράψαμε παραπάνω,εφόσον τα αρχεία που επεξεργάζεται δεν είναι πολύ μεγάλου μεγέθους.
@@ -400,37 +404,40 @@ To CPI(cycles per instruction) του benchmark ήταν 1.613367
 
 **2.L1 data cache associativity**
 
-![](/home/uglynick/Downloads/L1dca.png) 
+![L1dca](https://user-images.githubusercontent.com/57605047/70481424-3827f180-1aeb-11ea-80fa-93acde83bffc.png)
+
 
 Το associativity της L1 data cache δεν φαίνεται να επηρεάζει την επίδοση κανενός benchmark το οποίο πιστεύουμε ότι οφείλεται στα μικρά miss rates που καταγράψαμε κατα την εκτέλεση τους με default ορίσματα στο Βήμα 1ο.
 
 **3.L1 instruction cache size**
 
-![](/home/uglynick/Downloads/L1ics.png) 
+![L1ics](https://user-images.githubusercontent.com/57605047/70481467-57bf1a00-1aeb-11ea-8733-c4167443a9d0.png) 
 
 Αρχικά,σε αυτό το γράφημα πάλι παρατηρούμε ότι στα περισσότερα benchmarks οι μεταβολές στο μέγεθος της L1 instruction cache δεν επηρεάζουν την απόδοση των benchmarks σε πολύ μεγάλο βαθμό.Αυτό που έχει ενδιαφέρον είναι ότι στο 429.mcf benchmark βλέπουμε μία βελτίωση στην απόδοση όταν το μέγεθος της cache γίνεται μεγαλύτερο απο 16kB.Μην ξεχνάμε ότι στα περισσότερα προγράμματα τα accesses που γίνονται στην instruction cache είναι περισσότερα από αυτά που γίνονται στην data cache οπότε είναι αναμενόμενος ο αντίκτυπος στην επίδοση αν δούμε και την λειτουργία του 429.mcf που έχουμε παρουσιάσει παραπάνω.
 
 **4.L1 instruction cache associativity**
 
-![](/home/uglynick/Downloads/L1ica.png) 
+![L1ica](https://user-images.githubusercontent.com/57605047/70481485-61488200-1aeb-11ea-934c-b2257c522d82.png)
+
 
 Αντίστοιχα και με το associacitivity της L1 data cache και εδώ δεν περιμέναμε να δούμε μεγάλες μεταβολές στην απόδοση επειδή είχαμε παρατηρήσει ότι τα miss rates αυτής της cache ήταν πολύ μικρά στις εκτελέσεις όλων των benchmarks.
 
 **5.L2 cache size**
 
-![](/home/uglynick/Downloads/L2csr.png) 
+![L2csr](https://user-images.githubusercontent.com/57605047/70481500-6c9bad80-1aeb-11ea-8678-31e3d3449925.png) 
 
 Σε αυτό το γράφημα παρατηρούμε ότι η αύξηση του μεγέθους της L2 cache έχει θετικό αντίκτυπο στην απόδοση όλων των benchmarks κάτι που είναι αναμενομένο αφού το miss penalty στην L2 cache έχει μεγάλυτερο αντίκτυπο στην απόδοση από αυτό που έχουν οι L1 caches.
 
 **6.L2 cache associativity**
 
-![](/home/uglynick/Downloads/L2ca.png) 
+![L2ca](https://user-images.githubusercontent.com/57605047/70481512-78876f80-1aeb-11ea-807b-47aff017d17e.png)
+ 
 
 Παρατηρούμε ότι αύξηση του associativity της L2 cache δεν έχει σημαντική επίδραση στην απόδοση κάποιου benchmark.Ίσως αυτό οφείλεται στο μέγεθος της cache που είναι by deafult ορισμένο στα 2 ΜΒ.
 
 **7.Cache line size**
 
-![](/home/uglynick/Downloads/Cls.png) 
+![Cls](https://user-images.githubusercontent.com/57605047/70481520-82a96e00-1aeb-11ea-928c-345d0c5b1fbb.png) 
 
 Η συγκεκριμένη παράμετρος είχε την μεγαλύτερη επίδραση πάνω στο CPI(cycles peρ instruction) στην εκτέλεση των παραπάνω benchmarks.Εδώ βλέπουμε ότι στα 458.sjeng και 470.lbm έχουμε τεράστια βελτιώση όσο μεγαλώνουμε το μέγεθος της γραμμής των caches κάτι που πιστεύουμε ότι οφείλεται στο γεγονός ότι εκμεταλλευόμαστε σε μεγαλύτερο βαθμό το ισχυρό spatial locality τους.Αντίθετα,στα benchmarks 401.bzip2 και 429.mcf ενώ βλέπουμε μία αρχική βελτίωση στην απόδοση,όταν αυξήσουμε το μέγεθος της γραμμής των caches στα 1024kB το CPI(cycles per instruction) μεγαλώνει κάτι που είναι αποτέλεσμα της αύξησης του miss penalty και των conflict misses τα οποία αυξάνονται όσο μεγαλώνει το μέγεθος της γραμμής.
 
@@ -442,11 +449,11 @@ To CPI(cycles per instruction) του benchmark ήταν 1.613367
 
 Για την συνάρτηση Cost() έπειτα από μελέτη κάναμε τις εξής παραδοχές:
 
-**1.**Ότι το κόστος της υλοποίησης μίας n-way set associative cache είναι κοινό είτε είναι L1 cache είτε είναι L2 cache αφού υποθέτουμε ότι η πολυπλοκότητα αυξάνεται το ίδιο.
+**1.** Ότι το κόστος της υλοποίησης μίας n-way set associative cache είναι κοινό είτε είναι L1 cache είτε είναι L2 cache αφού υποθέτουμε ότι η πολυπλοκότητα αυξάνεται το ίδιο.
 
-**2.**Ότι η υλοποίηση μίας L1 cache ως προς το μέγεθος έχει αναλογία 1:16 με την ίδια υλοποίηση μίας L2 cache.Δηλαδή μία L1 cache του 1kB θα κοστίζει όσο μία L2 cache των 32kB.
+**2.** Ότι η υλοποίηση μίας L1 cache ως προς το μέγεθος έχει αναλογία 1:16 με την ίδια υλοποίηση μίας L2 cache.Δηλαδή μία L1 cache του 1kB θα κοστίζει όσο μία L2 cache των 32kB.
 
-**3.**Για το cache line size κάναμε την παραδοχή ότι όποτε διπλασιάζεται τότε διπλασιάζεται και το κόστος του.
+**3.** Για το cache line size κάναμε την παραδοχή ότι όποτε διπλασιάζεται τότε διπλασιάζεται και το κόστος του.
  
  Στον παρακάτω πίνακα ορίσαμε για ποιές τιμές της κάθε παραμέτρου το κόστος είναι ίσο με ένα(1) και ορίσαμε και το κόστος για κάποιες άλλες τιμές έτσι ώστε να γίνουν πιο κατανοητές οι παραδοχές που κάναμε σχετικά με το πόσο θα κοστίζει κάθε παράμετρος.
  
@@ -476,99 +483,99 @@ To CPI(cycles per instruction) του benchmark ήταν 1.613367
 
 **1. 401.bzip2 benchmark**
 
-_L1 data cache size:_16kB
+L1 data cache size:16kB
 
-_L1 data cache associativity:_2
+L1 data cache associativity:2
 
-_L1 instruction cache size:_16kB
+L1 instruction cache size:16kB
 
-_L1 instruction cache associativity:_2
+L1 instruction cache associativity:2
 
-_L2 cache size:_256kB
+L2 cache size:256kB
 
-_L2 cache associativity:_2
+L2 cache associativity:2
 
-_Cache line size:_32bytes
+Cache line size:32bytes
 
 **2. 429.mcf benchmark**
 
-_L1 data cache size:_16kB
+L1 data cache size:16kB
 
-_L1 data cache associativity:_2
+L1 data cache associativity:2
 
-_L1 instruction cache size:_32kB
+L1 instruction cache size:32kB
 
-_L1 instruction cache associativity:_2
+L1 instruction cache associativity:2
 
-_L2 cache size:_256kB
+L2 cache size:256kB
 
-_L2 cache associativity:_2
+L2 cache associativity:2
 
-_Cache line size:_32bytes
+Cache line size:32bytes
 
 **3. 456.hmmer benchmark**
 
-_L1 data cache size:_16kB
+L1 data cache size:16kB
 
-_L1 data cache associativity:_2
+L1 data cache associativity:2
 
-_L1 instruction cache size:_16kB
+L1 instruction cache size:16kB
 
-_L1 instruction cache associativity:_2
+L1 instruction cache associativity:2
 
-_L2 cache size:_256kB
+L2 cache size:256kB
 
-_L2 cache associativity:_2
+L2 cache associativity:2
 
-_Cache line size:_32bytes
+Cache line size:32bytes
 
 **4. 458.sjeng benchmark**
 
-_L1 data cache size:_16kB
+L1 data cache size:16kB
 
-_L1 data cache associativity:_2
+L1 data cache associativity:2
 
-_L1 instruction cache size:_16kB
+L1 instruction cache size:16kB
 
-_L1 instruction cache associativity:_2
+L1 instruction cache associativity:2
 
-_L2 cache size:_256kB
+L2 cache size:256kB
 
-_L2 cache associativity:_2
+L2 cache associativity:2
 
-_Cache line size:_256bytes
+Cache line size:256bytes
 
 **5. 470.lbm benchmark**
 
-_L1 data cache size:_16kB
+L1 data cache size:16kB
 
-_L1 data cache associativity:_2
+L1 data cache associativity:2
 
-_L1 instruction cache size:_16kB
+L1 instruction cache size:16kB
 
-_L1 instruction cache associativity:_2
+L1 instruction cache associativity:2
 
-_L2 cache size:_256kB
+L2 cache size:256kB
 
-_L2 cache associativity:_2
+L2 cache associativity:2
 
-_Cache line size:_128bytes
+Cache line size:128bytes
 
-Συνολικά η καλύτερη αρχιτεκτονική που έχουμε να προτείνουμε συνολικά είναι η εξής:
+Συνολικά η καλύτερη αρχιτεκτονική που έχουμε να προτείνουμε είναι η εξής:
 
-_L1 data cache size:_16kB
+L1 data cache size:16kB
 
-_L1 data cache associativity:_2
+L1 data cache associativity:2
 
-_L1 instruction cache size:_16kB
+L1 instruction cache size:16kB
 
-_L1 instruction cache associativity:_2
+L1 instruction cache associativity:2
 
-_L2 cache size:_256kB
+L2 cache size:256kB
 
-_L2 cache associativity:_2
+L2 cache associativity:2
 
-_Cache line size:_128bytes
+Cache line size:128bytes
 
 Και αυτό διότι παρατηρήσαμε ότι κατα την εκτέλεση όλων των benchmarks παίρνουμε ως αποτέλεσμα πολύ καλό CPI και σύμφωνα με την συνάρτηση Cost() έχει αποδεκτό κόστος.Στην ουσία θεωρούμε ότι το by default ορισμένο μέγεθος της Level 2 cache στα 2ΜΒ είναι ανώφελο από άποψη απόδοσης-κόστους οπότε και το μειώσαμε στα 256kB όπως και το associativity που είναι ορισμένο στα by default στα 8 και το κάναμε 2.Τέλος,το μέγεθος της γραμμής των caches το μεγαλώσαμε από 64bytes στα 128bytes,δηλαδή το διπλασιάσαμε,επειδή παρατηρήσαμε ότι επηρεάζει θετικά σε μεγάλο βαθμό την απόδοση όλων των benchmarks και δεν έχει τεράστια διαφορά κόστους από τα 64bytes.
 
