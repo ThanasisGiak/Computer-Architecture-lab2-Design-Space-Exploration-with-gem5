@@ -20,7 +20,7 @@
 
 **1.Μέγεθος L1 instruction cache**
 
-Το μέγεθος της L1 instruction cache είναι 32KB.
+Το μέγεθος της L1 instruction cache είναι 32kB.
 
 **config.ini**
 
@@ -38,7 +38,7 @@
 
 **2.Μεγεθός L1 data cache**
 
-Το μέγεθος της L1 data cache είναι 64KB.
+Το μέγεθος της L1 data cache είναι 64kB.
 
 **config.ini**
 
@@ -56,7 +56,7 @@
 
 **3.Μέγεθος L2 cache**
 
-Το μέγεθος της L2 cache είναι 2097KB.
+Το μέγεθος της L2 cache είναι 2097kB.
 
 **config.ini**
 
@@ -147,111 +147,111 @@
 
 **1. 401.bzip2 benchmark**
 
-*1.Χρόνος εκτέλεσης*
+_1.Χρόνος εκτέλεσης_
 
 >sim_seconds 0.161337
 
-*2.Cycles per instruction*
+_2.Cycles per instruction_
 
 >system.cpu.cpi 1.613367
 
-*3.L1 instruction cache miss rate*
+_3.L1 instruction cache miss rate_
 
 >system.cpu.icache.overall_miss_rate::total 0.000074
 
-*4.L1 data cache miss rate*
+_4.L1 data cache miss rate_
 
 >system.cpu.dcache.overall_miss_rate::total 0.014683
 
-*5.L2 cache miss rate*
+_5.L2 cache miss rate_
 
 >system.l2.overall_miss_rate::total 0.281702
 
 **2. 429.mcf benchmark**
 
-*1.Χρόνος εκτέλεσης*
+_1.Χρόνος εκτέλεσης_
 
 >sim_seconds 0.109125
 
-*2.Cycles per instruction*
+_2.Cycles per instruction_
 
 >system.cpu.cpi 1.091249
 
-*3.L1 instruction cache miss rate*
+_3.L1 instruction cache miss rate_
 
 >system.cpu.icache.overall_miss_rate::total 0.002051
 
-*4.L1 data cache miss rate*
+_4.L1 data cache miss rate_
 
 >system.cpu.dcache.overall_miss_rate::total 0.000037
 
-*5.L2 cache miss rate*
+_5.L2 cache miss rate_
 
 >system.l2.overall_miss_rate::total 0.724040
 
 **3. 456.hmmer benchmark**
 
-*1.Χρόνος εκτέλεσης*
+_1.Χρόνος εκτέλεσης_
 
 >sim_seconds 0.118453
 
-*2.Cycles per instruction*
+_2.Cycles per instruction_
 
 >system.cpu.cpi 1.184534
 
-*3.L1 instruction cache miss rate*
+_3.L1 instruction cache miss rate_
 
 >system.cpu.icache.overall_miss_rate::total 0.001638
 
-*4.L1 data cache miss rate*
+_4.L1 data cache miss rate_
 
 >system.cpu.dcache.overall_miss_rate::total 0.000205
 
-*5.L2 cache miss rate*
+_5.L2 cache miss rate_
 
 >system.l2.overall_miss_rate::total 0.082233
 
 **4. 458.sjeng benchmark**
 
-*1.Χρόνος εκτέλεσης*
+_1.Χρόνος εκτέλεσης_
 
 >sim_seconds 0.704063
 
-*2.Cycles per instruction*
+_2.Cycles per instruction_
 
 >system.cpu.cpi 7.040633
 
-*3.L1 instruction cache miss rate*
+_3.L1 instruction cache miss rate_
 
 >system.cpu.icache.overall_miss_rate::total 0.121829
 
-*4.L1 data cache miss rate*
+_4.L1 data cache miss rate_
 
 >system.cpu.dcache.overall_miss_rate::total 0.000020
 
-*5.L2 cache miss rate*
+_5.L2 cache miss rate_
 
 >system.l2.overall_miss_rate::total 0.999979
 
 **5. 470.lbm benchmark**
 
-*1.Χρόνος εκτέλεσης*
+_1.Χρόνος εκτέλεσης_
 
 >sim_seconds 0.262355
 
-*2.Cycles per instruction*
+_2.Cycles per instruction_
 
 >system.cpu.cpi 2.623555
 
-*3.L1 instruction cache miss rate*
+_3.L1 instruction cache miss rate_
 
 >system.cpu.icache.overall_miss_rate::total 0.060971
 
-*4.L1 data cache miss rate*
+_4.L1 data cache miss rate_
 
 >system.cpu.dcache.overall_miss_rate::total 0.000099
 
-*5.L2 cache miss rate*
+_5.L2 cache miss rate_
 
 >system.l2.overall_miss_rate::total 0.999927
 
@@ -476,99 +476,99 @@ To CPI(cycles per instruction) του benchmark ήταν 1.613367
 
 **1. 401.bzip2 benchmark**
 
-*L1 data cache size:*16kB
+_L1 data cache size:_16kB
 
-*L1 data cache associativity:*2
+_L1 data cache associativity:_2
 
-*L1 instruction cache size:*16kB
+_L1 instruction cache size:_16kB
 
-*L1 instruction cache associativity:*2
+_L1 instruction cache associativity:_2
 
-*L2 cache size:*256kB
+_L2 cache size:_256kB
 
-*L2 cache associativity:*2
+_L2 cache associativity:_2
 
-*Cache line size:*32bytes
+_Cache line size:_32bytes
 
 **2. 429.mcf benchmark**
 
-*L1 data cache size:*16kB
+_L1 data cache size:_16kB
 
-*L1 data cache associativity:*2
+_L1 data cache associativity:_2
 
-*L1 instruction cache size:*32kB
+_L1 instruction cache size:_32kB
 
-*L1 instruction cache associativity:*2
+_L1 instruction cache associativity:_2
 
-*L2 cache size:*256kB
+_L2 cache size:_256kB
 
-*L2 cache associativity:*2
+_L2 cache associativity:_2
 
-*Cache line size:*32bytes
+_Cache line size:_32bytes
 
 **3. 456.hmmer benchmark**
 
-*L1 data cache size:*16kB
+_L1 data cache size:_16kB
 
-*L1 data cache associativity:*2
+_L1 data cache associativity:_2
 
-*L1 instruction cache size:*16kB
+_L1 instruction cache size:_16kB
 
-*L1 instruction cache associativity:*2
+_L1 instruction cache associativity:_2
 
-*L2 cache size:*256kB
+_L2 cache size:_256kB
 
-*L2 cache associativity:*2
+_L2 cache associativity:_2
 
-*Cache line size:*32bytes
+_Cache line size:_32bytes
 
 **4. 458.sjeng benchmark**
 
-*L1 data cache size:*16kB
+_L1 data cache size:_16kB
 
-*L1 data cache associativity:*2
+_L1 data cache associativity:_2
 
-*L1 instruction cache size:*16kB
+_L1 instruction cache size:_16kB
 
-*L1 instruction cache associativity:*2
+_L1 instruction cache associativity:_2
 
-*L2 cache size:*256kB
+_L2 cache size:_256kB
 
-*L2 cache associativity:*2
+_L2 cache associativity:_2
 
-*Cache line size:*256bytes
+_Cache line size:_256bytes
 
 **5. 470.lbm benchmark**
 
-*L1 data cache size:*16kB
+_L1 data cache size:_16kB
 
-*L1 data cache associativity:*2
+_L1 data cache associativity:_2
 
-*L1 instruction cache size:*16kB
+_L1 instruction cache size:_16kB
 
-*L1 instruction cache associativity:*2
+_L1 instruction cache associativity:_2
 
-*L2 cache size:*256kB
+_L2 cache size:_256kB
 
-*L2 cache associativity:*2
+_L2 cache associativity:_2
 
-*Cache line size:*128bytes
+_Cache line size:_128bytes
 
 Συνολικά η καλύτερη αρχιτεκτονική που έχουμε να προτείνουμε συνολικά είναι η εξής:
 
-*L1 data cache size:*16kB
+_L1 data cache size:_16kB
 
-*L1 data cache associativity:*2
+_L1 data cache associativity:_2
 
-*L1 instruction cache size:*16kB
+_L1 instruction cache size:_16kB
 
-*L1 instruction cache associativity:*2
+_L1 instruction cache associativity:_2
 
-*L2 cache size:*256kB
+_L2 cache size:_256kB
 
-*L2 cache associativity:*2
+_L2 cache associativity:_2
 
-*Cache line size:*128bytes
+_Cache line size:_128bytes
 
 Και αυτό διότι παρατηρήσαμε ότι κατα την εκτέλεση όλων των benchmarks παίρνουμε ως αποτέλεσμα πολύ καλό CPI και σύμφωνα με την συνάρτηση Cost() έχει αποδεκτό κόστος.Στην ουσία θεωρούμε ότι το by default ορισμένο μέγεθος της Level 2 cache στα 2ΜΒ είναι ανώφελο από άποψη απόδοσης-κόστους οπότε και το μειώσαμε στα 256kB όπως και το associativity που είναι ορισμένο στα by default στα 8 και το κάναμε 2.Τέλος,το μέγεθος της γραμμής των caches το μεγαλώσαμε από 64bytes στα 128bytes,δηλαδή το διπλασιάσαμε,επειδή παρατηρήσαμε ότι επηρεάζει θετικά σε μεγάλο βαθμό την απόδοση όλων των benchmarks και δεν έχει τεράστια διαφορά κόστους από τα 64bytes.
 
