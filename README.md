@@ -260,7 +260,7 @@ _5.L2 cache miss rate_
 **1.Χρόνος εκτέλεσης(sim_seconds)**
  
 
-![](/home/uglynick/Downloads/sims.png) 
+![](https://user-images.githubusercontent.com/57605047/70481082-2c87fb00-1aea-11ea-9156-fa3a53efcb2b.png) 
 
 
 Παρατηρώντας τις καταγραφές μας αλλά και το σχετικό γράφημα βλέπουμε ότι για τα bencmarks 401.bzip2,429.mcf,456.hmmer έχουν κοντινό χρόνο εκτέλεσης και κάτω από 0,2 seconds,το benchmark 470.lbm έχει χρόνο εκτέλεσης πάνω από 0,2 seconds ενώ το 458.sjeng benchmark έχει πολύ μεγαλύτερο χρόνο εκτέλεσης από τα υπόλοιπα,λίγο παραπάνω από 0,7 seconds.
